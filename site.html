@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>A Vida no Céu — Caio</title>
+  <style>
+    :root{--bg:#F8FBFF;--card:#FFFFFF;--accent:#6C8CD5;--muted:#6B7280}
+    *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef6ff);color:#0f172a}
+    .wrap{max-width:760px;margin:30px auto;padding:18px}
+    header{display:flex;gap:12px;align-items:center}
+    .logo{width:78px;height:78px;border-radius:10px;background:linear-gradient(135deg,#e8f1ff,#fffafc);display:flex;align-items:center;justify-content:center;border:1px solid rgba(0,0,0,0.04)}
+    .logo svg{width:52px;height:52px}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:6px 0 16px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 4px 18px rgba(20,40,80,0.06);border:1px solid rgba(13,31,64,0.03)}
+    .small{font-size:13px;color:var(--muted)}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    button.primary{background:var(--accent);border:none;color:white;padding:10px 14px;border-radius:8px;cursor:pointer}
+    .center{text-align:center}
+    .chars{display:flex;gap:8px;flex-wrap:wrap}
+    .char{flex:1 1 140px;background:#fbfdff;padding:8px;border-radius:8px;border:1px dashed rgba(108,140,213,0.15)}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+    .note{font-size:13px;color:var(--muted)}
+    .media{display:flex;gap:8px;align-items:center}
+    a.link{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="logo" aria-hidden>
+        <!-- simple cloud + dirigible icon -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 36c-4-6 2-12 9-10 1-6 10-8 14-3 6-1 11 3 10 8 5 1 7 7 4 11-3 4-9 4-13 3-3 3-11 4-21 1z" fill="#E6F0FF"/><path d="M6 44c6 2 18 4 28 0 3 2 8 3 14 3 2 0 3 2 2 4-1 2-4 3-8 3-9 0-25-3-36-10z" fill="#CFE0FF"/></svg>
+      </div>
+      <div>
+        <h1>*A Vida no Céu* —  por Caio (7º ano)</h1>
+        <p class="lead"></p>
+      </div>
+    </header>
+
+    <section class="grid" style="margin-top:14px">
+      <div class="card">
+        <h3 style="margin:0 0 6px">O que foi o Dilúvio?</h3>
+        <p class="small">Uma consequência do aquecimento global que cobriu a Terra com água. As pessoas passaram a viver em cidades que flutuam no céu.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px">Mundo flutuante</h3>
+        <p class="small">Cidades como <strong>Luanda</strong>, <strong>Paris</strong> e <strong>Tóquio</strong> foram adaptadas para viver entre nuvens.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px">Personagens (1 palavra)</h3>
+        <div class="chars" aria-hidden>
+          <div class="char"><strong>Carlos Tucano</strong><div class="small">Curioso</div></div>
+          <div class="char"><strong>Júlio Tucano</strong><div class="small">Sonhador</div></div>
+          <div class="char"><strong>Aimée</strong><div class="small">Livre</div></div>
+          <div class="char"><strong>Sibongile</strong><div class="small">Sábia</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px">Temas</h3>
+        <p class="small">Liberdade • Esperança • Conhecimento • Sonhos</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px">Vocabulário</h3>
+        <p class="small"><strong>Voar</strong> — ser livre.<br><strong>Nefelibata</strong> — viver nas nuvens.<br><strong>Horizonte</strong> — novo começo.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 6px">Minha conclusão</h3>
+        <p class="small">O livro mostra que, mesmo depois de um desastre, as pessoas continuam sonhando e recomeçando.</p>
+      </div>
+    </section>
+
+    
+
+      
+
+     
+
+    <footer>
+      <div class="note">Criado por Caio — 7º ano</div>
+    </footer>
+  </main>
+
+  <script>
+    function playVideo(){
+      var url = document.getElementById('videoUrl').value.trim();
+      if(!url){alert('Cole a URL do vídeo primeiro.');return}
+      var a = document.getElementById('videoLink');
+      a.href = url; a.style.display='inline';
+      window.open(url, '_blank');
+    }
+    function playAudio(){
+      var url = document.getElementById('audioUrl').value.trim();
+      if(!url){alert('Cole a URL do áudio primeiro.');return}
+      var p = document.getElementById('player');
+      p.src = url; p.style.display='block'; p.play();
+    }
+  </script>
+</body>
+</html>
